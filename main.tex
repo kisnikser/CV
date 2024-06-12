@@ -1,0 +1,192 @@
+%%%%%%%%%%%%%%%%%
+% This is a two-column CV template based on moderncv.cls
+% (v1.0, May 16 2024) written by Genki Ogaki (rockstarogk@gmail.com). Compiles with XeLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+% environment
+\documentclass[11pt,a4paper]{moderncv}
+\moderncvtheme[blue]{banking}
+\nopagenumbers{}
+
+\usepackage[T1]{fontenc}
+\usepackage{inputenc}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+% macro
+%\renewcommand*{\labelitemi}{$\bullet$}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\newcommand*{\experienceentry}[4][1.5mm]{
+    \subsection{#2} \vspace{-1.5mm}
+    \begin{tabularx}{\textwidth}{LR}
+        {\itshape #3} & {\itshape #4}
+    \end{tabularx}
+    \par\addvspace{#1}
+}
+
+\newcommand*{\educationentry}[4][0.5mm]{
+    \begin{tabularx}{\textwidth}{LR}
+        {\bfseries #3} & {\bfseries #4} \\
+    \end{tabularx}
+    {\itshape #2}
+    \par\addvspace{#1}
+}
+
+\newcommand*{\scoreentry}[3][2.5mm]{
+    {\bfseries #2} \\
+    {\itshape #3}
+    \par\addvspace{#1}
+}
+
+% preamble
+\name{Nikita}{Kiselev}
+\address{Moscow, Russia}
+\email{kiselev.ns@phystech.edu}
+\social[linkedin]{kisnikser}
+\social[github]{kisnikser}
+\social[telegram]{kisnikser}
+\extrainfo{\homepagesymbol \href{https://kisnikser.github.io}{kisnikser.github.io}}
+
+\patchcmd{\makehead}
+  {\hfil}
+  {\hspace*{0.15\textwidth}}
+  {}
+  {}
+\patchcmd{\makehead}
+  {\setlength{\makeheaddetailswidth}{0.8\textwidth}}
+  {\setlength{\makeheaddetailswidth}{0.5\textwidth}}
+  {}
+  {}
+\patchcmd{\makehead}
+  {\\[2.5em]}
+  {\hfil\raisebox{-1.2cm}{\framebox{\includegraphics[width=\@photowidth]{\@photo}}}\\[2.5em]}
+  {}
+  {}
+
+% photo
+\photo[80pt][0.4pt]{photo}
+
+\begin{document}
+\maketitle
+\vspace{-0.5cm}
+
+% left column
+\begin{minipage}[t]{0.62\textwidth}
+
+\section{EXPERIENCE}
+\experienceentry{\href{https://ai.sber.ru/en/about}{Sber AI}}{Intern}{Jun 2024 -- Present}
+\experienceentry{\href{https://labmmo.ru/en}{Laboratory of Mathematical Methods of Optimization}}{Technician}{Oct 2023 -- Apr 2024}
+
+\section{ACHIEVEMENTS}
+
+\begin{itemize}
+\item \textbf{Spring 2023-2024:} 3rd degree personal scholarship for contributions to the development of numerical optimization methods
+\item \textbf{Fall 2023-2024:} K.V. Rudakov scientific academic scholarship for research activities in the field of applied mathematics
+\item \textbf{Fall 2023-2024:} 3rd degree personal scholarship for contributions to the development of numerical optimization methods
+\item \textbf{2020-2023:} Abramov scholarship for 1-3 year bachelor students with the best grades at MIPT
+\end{itemize}
+
+\section{PROJECTS}
+
+\begin{itemize}
+\item \href{https://github.com/kisnikser/Posterior-Distributions-Proximity}{\textbf{Sample Size Determination: Posterior Distributions Proximity}}
+Two approaches to determining a sufficient sample size based on the proximity of posterior distributions of model parameters on similar subsets
+\item \href{https://github.com/DorinDaniil/Forecasting-fMRI-Images/tree/main}{\textbf{Forecasting fMRI Images From Video Sequences: Linear Model Analysis}}\\
+Using linear models and testing hypotheses about the relationship between data
+\item \href{https://github.com/kisnikser/Epidemic-Spread-Models}{\textbf{Models of epidemic spread, in particular COVID-19 as a model of stochastic chemical kinetics}}\\
+Various approaches to modeling the spread of epidemics, differential equations and Markov processes
+\item \href{https://github.com/kisnikser/Optimization-Methods}{\textbf{Optimization methods for quadratic problems with large dimensionality}}\\
+Comparison of different methods of solving high-dimensional linear regression problems
+\item \href{https://github.com/kisnikser/Intelligent-Presentation-Generator}{\textbf{Intelligent Presentation Generator}}\\
+Application for generating presentations based on text files using topic modeling
+\end{itemize}
+
+\section{TALKS}
+
+\begin{itemize}
+\item \href{https://www.youtube.com/live/WnIRaRl730A?si=q0eScgnDP2ZidCpK&t=1723}{\textbf{66th MIPT All-Russian Scientific Conference}} -- April 6, 2024\\
+Determining a sufficient sample size based on the a posteriori distribution of model parameters
+\end{itemize}
+
+\end{minipage}
+\hfill
+% right column
+\begin{minipage}[t]{0.35\textwidth}
+
+\section{SUMMARY}
+Aspiring researcher in the field of machine learning and optimization.  Focused on \textbf{generative diffusion and multimodal models}. Motivated for productive work and learning. Having a substantial theoretical foundation and mathematical background.
+
+\section{SKILLS}
+\begin{tabularx}{\textwidth}{>{\bfseries}l@{\hskip 3.5mm}L}
+DL & PyTorch, TensorBoard, Huggingface \\
+ML & NumPy, SciPy, Pandas \\
+OS & macOS, Windows \\
+Misc. & \LaTeX \\
+Soft Skills & Responsibility, Dedication
+\end{tabularx}
+
+\section{EDUCATION}
+\educationentry{BSc in Applied Mathematics and Physics}{\href{https://mipt.ru}{MIPT}}{Moscow, Russia}
+\begin{itemize}
+\item Thesis: \par \href{https://github.com/intsystems/Kiselev-BS-Thesis}{Bayesian Sample Size Estimation}
+\item Advisor: \par \href{https://andriygav.github.io}{Andrey Grabovoy}
+\item GPA: 4.88/5 (8.91/10)
+\end{itemize}
+
+%\section{SCORES}
+%\scoreentry{IELTS (General Training)}{Overall: 7.5}
+%\scoreentry{AtCoder}{Rate: 1800+, \, Solved problems: 1800+}
+%\scoreentry{LeetCode}{Rate: 2400+, \, Solved problems: 800+}
+
+\section{LANGUAGES}
+\begin{itemize}
+    \item Russian (Native)
+    \item English (Advanced)
+\end{itemize}
+
+\section{INTERESTS}
+\begin{itemize}
+    \item Gym
+    \item Guitar
+\end{itemize}
+\end{minipage}
+
+\vspace*{\fill}
+\begin{center}
+\textit{Last updated on \today}
+\end{center}
+\vspace{-1.5cm}
+\end{document}
+
+% document
+\begin{document}
+\maketitle
+
+% left column
+
+\begin{columns}[t]
+\begin{column}{0.62\textwidth}
+
+\end{column}
+
+\begin{column}{0.35\textwidth}
+
+\end{column}
+\end{columns}
+
+\end{document}

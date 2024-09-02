@@ -18,7 +18,7 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{inputenc}
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.95]{geometry}
 \usepackage{tabularx}
 \usepackage{mathpazo}
 \usepackage{graphicx}
@@ -55,6 +55,7 @@
 
 % preamble
 \name{Nikita}{Kiselev}
+\quote{Data Scientist, Optimization Researcher}
 \address{Moscow, Russia}
 \email{kiselev.ns@phystech.edu}
 \social[linkedin]{kisnikser}
@@ -74,7 +75,7 @@
   {}
 \patchcmd{\makehead}
   {\\[2.5em]}
-  {\hfil\raisebox{-1.2cm}{\framebox{\includegraphics[width=\@photowidth]{\@photo}}}\\[2.5em]}
+  {\hfil\raisebox{-1.2cm}{\framebox{\includegraphics[width=\@photowidth]{\@photo}}}\\[0.5em]}
   {}
   {}
 
@@ -83,14 +84,41 @@
 
 \begin{document}
 \maketitle
-\vspace{-0.5cm}
+\vspace{-1cm}
 
 % left column
 \begin{minipage}[t]{0.62\textwidth}
 
-\section{EXPERIENCE}
-\experienceentry{\href{https://ai.sber.ru/en/about}{Sber AI}}{Intern}{Jun 2024 -- Present}
-\experienceentry{\href{https://labmmo.ru/en}{Laboratory of Mathematical Methods of Optimization}}{Technician}{Oct 2023 -- Apr 2024}
+\section{WORK EXPERIENCE}
+\experienceentry{\href{https://ai.sber.ru/en/about}{Sber AI}}{Research Intern}{Jun 2024 -- Present}{
+    Research work on instructed image editing for the Kandinsky model:
+    \begin{itemize}
+        \item Implemented and trained a model for re-contextualization by human face (Kandinsky~3 + IP Adapter + PhotoMakerV2)
+        \item Collected a dataset on the movement of objects (LLaVa-Next + Grounding DINO + SAM + Alpha-CLIP-T + SDXL inpainting + SinSR)
+        \item Created a module for calculating image editing metrics (LPIPS, DINO, CLIP-I, CLIP-T, CLIP-D, Alpha-CLIP-T)
+    \end{itemize}
+}
+\experienceentry{\href{https://labmmo.ru/en}{Laboratory of Mathematical Methods of Optimization}}{Technician}{Oct 2023 -- Apr 2024}{
+    Research work in the field of optimization:
+  \begin{itemize}
+      \item Decentralized optimization with coupled constraints
+  \end{itemize}
+}
+
+\section{PUBLICATIONS}
+
+\begin{enumerate}
+    \item D.~Yarmoshik, D.~Kovalev, A.~Rogozin, N.~Kiselev, D.~Dorin, A.~Gasnikov. Decentralized Optimization with Coupled Constraints. // Submitted to the \href{https://neurips.cc}{\textbf{NeurIPS 2024}} conference with average rating 5.5. 
+    \item N. Kiselev, A. Grabovoy. \href{https://github.com/kisnikser/landscape-hessian}{Unraveling the Hessian: A Key to Smooth Convergence in Loss Function Landscapes}. // Submitted to the \href{https://aij.ru/eng}{AI Journey 2024} conference.
+    \item N. Kiselev, A. Grabovoy. \href{https://github.com/kisnikser/Posterior-Distributions-Proximity}{Sample Size Determination: Posterior Distributions Proximity}. // Submitted to the \href{https://link.springer.com/journal/10287}{Computational Management Science} journal.
+    \item D. Dorin, N. Kiselev, A. Grabovoy. \href{https://github.com/DorinDaniil/Forecasting-fMRI-Images}{Forecasting fMRI Images From Video Sequences: Linear Model Analysis}. // Submitted to the \href{https://link.springer.com/journal/13755}{Health Information Science and Systems} journal.
+\end{enumerate}
+
+\section{TALKS}
+
+\begin{itemize}
+\item April 6, 2024. \href{https://www.youtube.com/live/WnIRaRl730A?si=q0eScgnDP2ZidCpK&t=1723}{Determining a sufficient sample size based on the a posteriori distribution of model parameters}. // 66th MIPT All-Russian Scientific Conference.
+\end{itemize}
 
 \section{ACHIEVEMENTS}
 
@@ -101,27 +129,20 @@
 \item \textbf{2020-2023:} Abramov scholarship for 1-3 year bachelor students with the best grades at MIPT
 \end{itemize}
 
-\section{PROJECTS}
+%\section{PROJECTS}
 
-\begin{itemize}
-\item \href{https://github.com/kisnikser/Posterior-Distributions-Proximity}{\textbf{Sample Size Determination: Posterior Distributions Proximity}}
-Two approaches to determining a sufficient sample size based on the proximity of posterior distributions of model parameters on similar subsets
-\item \href{https://github.com/DorinDaniil/Forecasting-fMRI-Images/tree/main}{\textbf{Forecasting fMRI Images From Video Sequences: Linear Model Analysis}}\\
-Using linear models and testing hypotheses about the relationship between data
-\item \href{https://github.com/kisnikser/Epidemic-Spread-Models}{\textbf{Models of epidemic spread, in particular COVID-19 as a model of stochastic chemical kinetics}}\\
-Various approaches to modeling the spread of epidemics, differential equations and Markov processes
-\item \href{https://github.com/kisnikser/Optimization-Methods}{\textbf{Optimization methods for quadratic problems with large dimensionality}}\\
-Comparison of different methods of solving high-dimensional linear regression problems
-\item \href{https://github.com/kisnikser/Intelligent-Presentation-Generator}{\textbf{Intelligent Presentation Generator}}\\
-Application for generating presentations based on text files using topic modeling
-\end{itemize}
-
-\section{TALKS}
-
-\begin{itemize}
-\item \href{https://www.youtube.com/live/WnIRaRl730A?si=q0eScgnDP2ZidCpK&t=1723}{\textbf{66th MIPT All-Russian Scientific Conference}} -- April 6, 2024\\
-Determining a sufficient sample size based on the a posteriori distribution of model parameters
-\end{itemize}
+%\begin{itemize}
+%\item \href{https://github.com/kisnikser/Posterior-Distributions-Proximity}{\textbf{Sample Size Determination: Posterior Distributions Proximity}}
+%Two approaches to determining a sufficient sample size based on the proximity of posterior distributions of model parameters on similar subsets
+%\item \href{https://github.com/DorinDaniil/Forecasting-fMRI-Images/tree/main}{\textbf{Forecasting fMRI Images From Video Sequences: Linear Model Analysis}}\\
+%Using linear models and testing hypotheses about the relationship between data
+%\item \href{https://github.com/kisnikser/Epidemic-Spread-Models}{\textbf{Models of epidemic spread, in particular COVID-19 as a model of stochastic chemical kinetics}}\\
+%Various approaches to modeling the spread of epidemics, differential equations and Markov processes
+%\item \href{https://github.com/kisnikser/Optimization-Methods}{\textbf{Optimization methods for quadratic problems with large dimensionality}}\\
+%Comparison of different methods of solving high-dimensional linear regression problems
+%\item \href{https://github.com/kisnikser/Intelligent-Presentation-Generator}{\textbf{Intelligent Presentation Generator}}\\
+%Application for generating presentations based on text files using topic modeling
+%\end{itemize}
 
 \end{minipage}
 \hfill
@@ -129,7 +150,7 @@ Determining a sufficient sample size based on the a posteriori distribution of m
 \begin{minipage}[t]{0.35\textwidth}
 
 \section{SUMMARY}
-Aspiring researcher in the field of machine learning and optimization.  Focused on \textbf{generative diffusion and multimodal models}. Motivated for productive work and learning. Having a substantial theoretical foundation and mathematical background.
+Aspiring researcher in the field of machine learning and optimization.  Focused on generative diffusion and multimodal models. Motivated for productive work and learning. Having a substantial theoretical foundation and mathematical background.
 
 \section{SKILLS}
 \begin{tabularx}{\textwidth}{>{\bfseries}l@{\hskip 3.5mm}L}
@@ -141,11 +162,14 @@ Soft Skills & Responsibility, Dedication
 \end{tabularx}
 
 \section{EDUCATION}
-\educationentry{BSc in Applied Mathematics and Physics}{\href{https://mipt.ru}{MIPT}}{Moscow, Russia}
+
+\educationentry{MSc in Computer Science\\Sep 2024 -- Present}{\href{https://mipt.ru}{MIPT}}{Moscow, Russia}
+
+\educationentry{BSc in Applied Mathematics and Physics\\Sep 2020 -- Jul 2024}{\href{https://mipt.ru}{MIPT}}{Moscow, Russia}
 \begin{itemize}
 \item Thesis: \par \href{https://github.com/intsystems/Kiselev-BS-Thesis}{Bayesian Sample Size Estimation}
 \item Advisor: \par \href{https://andriygav.github.io}{Andrey Grabovoy}
-\item GPA: 4.88/5 (honors)
+\item GPA: 4.88/5 (with honours)
 \end{itemize}
 
 %\section{SCORES}
@@ -170,7 +194,7 @@ Soft Skills & Responsibility, Dedication
 \begin{center}
 \textit{Last updated on \today}
 \end{center}
-\vspace{-1.5cm}
+\vspace{-0.5cm}
 \end{document}
 
 % document

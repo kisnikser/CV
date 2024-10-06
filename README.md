@@ -14,3 +14,7 @@ I also use [LaTeX.Online](https://github.com/aslushnikov/latex-online) to build 
 
 > [!NOTE]
 > Check compiled PDF files here: [Resume](https://latexonline.cc/compile?git=https://github.com/kisnikser/CV&target=resume.tex&command=xelatex&force=true) and [CV](https://latexonline.cc/compile?git=https://github.com/kisnikser/CV&target=cv.tex&command=xelatex&force=true).
+
+<div align="center">
+  <img alt="header" width=500 src="https://github.com/user-attachments/assets/96a16e78-3863-4948-a5e3-52703d65680a">
+</div>

@@ -1,6 +1,6 @@
 \documentclass[11pt,a4paper]{moderncv}
 \moderncvtheme[blue]{banking}
-% \nopagenumbers{}
+\nopagenumbers{}
 
 \usepackage[T1]{fontenc}
 \usepackage{inputenc}
@@ -9,6 +9,7 @@
 \usepackage{mathpazo}
 \usepackage{graphicx}
 \usepackage{multicol}
+% \usepackage[shortlabels]{enumitem}
 
 % preamble
 \name{Nikita}{Kiselev}
@@ -34,19 +35,19 @@
 {}
 \patchcmd{\makehead}
 {\\[2.5em]}
-{\hfil\raisebox{-1.2cm}{\framebox{\includegraphics[width=\@photowidth]{\@photo}}}\\[2.0em]}
+{\hfil\raisebox{-1.2cm}{\includegraphics[width=\@photowidth]{\@photo}}\\[2.0em]}
 {}
 {}
 
 % photo
-\photo[80pt][0.4pt]{photo}
+\photo[80pt][0.4pt]{photo.png}
 
 \begin{document}
 
 \makecvtitle
 
 \section{SUMMARY}
-Aspiring researcher (1+ year of research experience) in the field of machine learning and optimization. Focused on generative diffusion and multi-modal models. Motivated for productive work and learning. Having a substantial theoretical foundation and mathematical background.
+Aspiring researcher (1+ year of research experience) in the field of machine learning and optimization. Focused on generative diffusion and multimodal models. Motivated for productive work and learning. Having a substantial theoretical foundation and mathematical background.
 
 \section{EDUCATION}
 
@@ -87,29 +88,29 @@ Aspiring researcher (1+ year of research experience) in the field of machine lea
 
 \section{PUBLICATIONS}
 % \subsection{Published Papers}
-\subsection{Accepted Papers (\textbf{1 $\times$ Q2})}
-\begin{enumerate}
+\subsection{Accepted Papers: 1 $\times$ Q1, 2 $\times$ Q2}
+\begin{enumerate}%[start=1,label={[\arabic*]}]
+    \item D. Dorin, N. Kiselev, A. Grabovoy\\
+    \href{https://github.com/DorinDaniil/Forecasting-fMRI-Images}{Forecasting fMRI Images From Video Sequences: Linear Model Analysis}\\
+    Accepted to the \href{https://link.springer.com/journal/13755}{Health Information Science and Systems} journal, \textbf{Q1}
     \item N. Kiselev, A. Grabovoy\\
     \href{https://arxiv.org/abs/2409.11995}{Unraveling the Hessian: A Key to Smooth Convergence in Loss Function Landscapes}\\
-    Will be published in the \href{https://link.springer.com/journal/11472}{Doklady Mathematics} journal
+    Accepted to the \href{https://link.springer.com/journal/11472}{Doklady Mathematics} journal, Q2
+    \item N. Kiselev, A. Grabovoy\\
+    \href{https://github.com/kisnikser/Likelihood-Bootstrapping}{Sample Size Determination: Likelihood Bootstrapping}\\
+    Accepted to the \href{https://link.springer.com/journal/11470}{Computational Mathematics and Mathematical Physics} journal, Q2
 \end{enumerate}
 \subsection{Papers under Review \& Preprints}
-\begin{enumerate}
+\begin{enumerate}%[start=1,label={[\arabic*]}]
     \item D.~Yarmoshik, A.~Rogozin, N.~Kiselev, D.~Dorin, A.~Gasnikov, D.~Kovalev\\
     \href{https://arxiv.org/abs/2407.02020}{Decentralized Optimization with Coupled Constraints}\\
     Submitted to the \href{https://neurips.cc}{\textbf{ICLR 2025}} conference
     \item N. Kiselev, A. Grabovoy\\
     \href{https://github.com/kisnikser/Posterior-Distributions-Proximity}{Sample Size Determination: Posterior Distributions Proximity}\\
     Submitted to the \href{https://link.springer.com/journal/10287}{Computational Management Science} journal
-    \item N. Kiselev, A. Grabovoy\\
-    \href{https://github.com/kisnikser/Likelihood-Bootstrapping}{Sample Size Determination: Likelihood Bootstrapping}\\
-    Submitted to the \href{https://link.springer.com/journal/11470}{Computational Mathematics and Mathematical Physics} journal
-    \item D. Dorin, N. Kiselev, A. Grabovoy\\
-    \href{https://github.com/DorinDaniil/Forecasting-fMRI-Images}{Forecasting fMRI Images From Video Sequences: Linear Model Analysis}\\
-    Submitted to the \href{https://link.springer.com/journal/13755}{Health Information Science and Systems} journal
 \end{enumerate}
 \subsection{Conference Theses}
-\begin{enumerate}
+\begin{enumerate}%[start=1,label={[\arabic*]}]
     \item N.~Kiselev, A.~Grabovoy\\
     \href{https://old.mipt.ru/upload/medialibrary/d79/fpmi.pdf}{Determining a sufficient sample size based on the a posteriori distribution of model parameters}\\
     Proceedings of the \href{https://conf.mipt.ru/}{66th MIPT All-Russian Scientific Conference}
@@ -168,11 +169,11 @@ Aspiring researcher (1+ year of research experience) in the field of machine lea
 
 \section{SKILLS}
 \begin{itemize}
-    \item \textbf{DL:} PyTorch, TensorFlow, Huggingface, Accelerate, WandbB, TensorBoard
-    \item \textbf{ML:} NumPy, SciPy, Pandas, NetworkX
+    \item \textbf{DL:} PyTorch, Huggingface, Accelerate, Multi GPU training: DDP/FSDP, W\&B, TensorBoard
+    \item \textbf{ML:} NumPy, SciPy, Pandas, NetworkX, Scikit-learn, LightGBM, CatBoost
     \item \textbf{OS:} macOS, Linux, Windows
-    \item \textbf{Misc.:} Git, \LaTeX, Bash
-    \item \textbf{Soft Skills:} Responsibility, Dedication
+    \item \textbf{Misc.:} Git, Bash, \LaTeX
+    \item \textbf{Soft Skills:} responsible, organized, critical thinker, flexible, communicative, team player, patient
 \end{itemize}
 
 \section{LANGUAGES}
@@ -190,7 +191,7 @@ Aspiring researcher (1+ year of research experience) in the field of machine lea
 % Last updated on
 \vspace{\fill}
 \begin{center}
-\textit{Last updated on October 6, 2024}
+\textit{Last updated on October 15, 2024}
 \end{center}
 \vspace{-3.0cm}
 

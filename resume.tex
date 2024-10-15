@@ -18,7 +18,7 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{inputenc}
-\usepackage[scale=0.95]{geometry}
+\usepackage[scale=0.95, top=1cm]{geometry}
 \usepackage{tabularx}
 \usepackage{mathpazo}
 \usepackage{graphicx}
@@ -54,9 +54,9 @@
 }
 
 % preamble
-\name{Nikita}{Kiselev}
+\name{Nikita}{Kiselev\vspace{0.3em}}
 \quote{Data Scientist, Optimization Researcher}
-\address{Moscow, Russia}
+% \address{Moscow, Russia}
 \email{kiselev.ns@phystech.edu}
 \newcommand*{\scholarsocialsymbol}{\includegraphics[height=.7\baselineskip]{google-scholar}}
 \collectionadd[scholar]{socials}{\href{https://scholar.google.com/citations?hl=ru&user=8BOqs70AAAAJ}{ Google Scholar}}
@@ -65,34 +65,22 @@
 \social[telegram]{kisnikser}
 \extrainfo{\homepagesymbol \href{https://kisnikser.github.io}{kisnikser.github.io}}
 
-\patchcmd{\makehead}
-  {\hfil}
-  {\hspace{0.05\textwidth}}
-  {}
-  {}
-\patchcmd{\makehead}
-  {\setlength{\makeheaddetailswidth}{0.8\textwidth}}
-  {\setlength{\makeheaddetailswidth}{0.5\textwidth}}
-  {}
-  {}
-\patchcmd{\makehead}
-  {\\[2.5em]}
-  {\hfil\raisebox{-1.2cm}{\framebox{\includegraphics[width=\@photowidth]{\@photo}}}\\[0.5em]}
-  {}
-  {}
-
-% photo
-\photo[80pt][0.4pt]{photo}
+\makeatletter
+% change name size
+\renewcommand{\namefont}{\huge \bfseries}
+% reduce space before quote
+\renewcommand*{\quotestyle}[1]{{\vspace*{-2.1em}\quotefont\textcolor{color1}{#1}}}
+\makeatother
 
 \begin{document}
 \maketitle
-\vspace{-1cm}
+\vspace{-3em}
 
 % left column
 \begin{minipage}[t]{0.62\textwidth}
 
 \section{WORK EXPERIENCE}
-\experienceentry{\href{https://ai.sber.ru/en/about}{Sber AI}}{Research intern}{Jun 2024 -- Present}{
+\experienceentry{\href{https://ai.sber.ru/en/about}{Sber AI}}{Research Intern}{Jun 2024 -- Present}{
     Research work on instructed image editing for the Kandinsky model:
     \begin{itemize}
         \item Implemented and trained a model for re-contextualization by human face (Kandinsky~3 + IP Adapter + PhotoMakerV2)
@@ -115,10 +103,10 @@
 \section{FEATURED PUBLICATIONS}
 
 \begin{enumerate}
-    \item D.~Yarmoshik, A.~Rogozin, N.~Kiselev, D.~Dorin, A.~Gasnikov, D.~Kovalev. \href{https://arxiv.org/abs/2407.02020}{Decentralized Optimization with Coupled Constraints}. // Submitted to the \href{https://neurips.cc}{\textbf{ICLR 2025}} conference. 
-    \item N. Kiselev, A. Grabovoy. \href{https://github.com/kisnikser/landscape-hessian}{Unraveling the Hessian: A Key to Smooth Convergence in Loss Function Landscapes}. // Accepted to the \href{https://aij.ru/eng}{AI Journey 2024} conference.
-    \item N. Kiselev, A. Grabovoy. \href{https://github.com/kisnikser/Posterior-Distributions-Proximity}{Sample Size Determination: Posterior Distributions Proximity}. // Submitted to the \href{https://link.springer.com/journal/10287}{Computational Management Science} journal.
-    \item D. Dorin, N. Kiselev, A. Grabovoy. \href{https://github.com/DorinDaniil/Forecasting-fMRI-Images}{Forecasting fMRI Images From Video Sequences: Linear Model Analysis}. // Submitted to the \href{https://link.springer.com/journal/13755}{Health Information Science and Systems} journal.
+    \item D.~Yarmoshik, A.~Rogozin, N.~Kiselev, D.~Dorin, A.~Gasnikov, D.~Kovalev. \href{https://arxiv.org/abs/2407.02020}{Decentralized Optimization with Coupled Constraints}. // Submitted to the \href{https://neurips.cc}{\textbf{ICLR 2025}} conference, \textbf{A*}
+    \item D. Dorin, N. Kiselev, A. Grabovoy. \href{https://github.com/DorinDaniil/Forecasting-fMRI-Images}{Forecasting fMRI Images From Video Sequences: Linear Model Analysis}. // Accepted to the \href{https://link.springer.com/journal/13755}{Health Information Science and Systems} journal, \textbf{Q1}
+    \item N. Kiselev, A. Grabovoy. \href{https://arxiv.org/abs/2409.11995}{Unraveling the Hessian: A Key to Smooth Convergence in Loss Function Landscapes}. // Accepted to the \href{https://link.springer.com/journal/11472}{Doklady Mathematics} journal, Q2
+    \item N. Kiselev, A. Grabovoy. \href{https://github.com/kisnikser/Likelihood-Bootstrapping}{Sample Size Determination: Likelihood Bootstrapping}. // Accepted to the \href{https://link.springer.com/journal/11470}{Computational Mathematics and Mathematical Physics} journal, Q2
 \end{enumerate}
 
 \section{FEATURED TALKS}
@@ -168,12 +156,12 @@
 Aspiring researcher (1+ year of research experience) in the field of machine learning and optimization. Focused on generative diffusion and multi-modal models. Motivated for productive work and learning. Having a substantial theoretical foundation and mathematical background.
 
 \section{SKILLS}
-\begin{tabularx}{\textwidth}{>{\bfseries}l@{\hskip 3.5mm}L}
-DL & PyTorch, TensorBoard, Huggingface \\
-ML & NumPy, SciPy, Pandas \\
-OS & macOS, Windows \\
-Misc. & \LaTeX \\
-Soft Skills & Responsibility, Dedication
+\begin{tabularx}{\textwidth}{>{\bfseries}r@{\hskip 3.5mm}L}
+DL: & PyTorch, Huggingface, Accelerate, Multi GPU training: DDP/FSDP, W\&B, TensorBoard \\
+ML: & NumPy, SciPy, Pandas, NetworkX, Scikit-learn, LightGBM, CatBoost \\
+OS: & macOS, Linux, Windows \\
+Misc.: & Git, Bash, \LaTeX \\
+Soft: & responsible, organized, critical thinker, flexible, communicative, team player, patient
 \end{tabularx}
 
 \section{EDUCATION}
@@ -208,7 +196,7 @@ Soft Skills & Responsibility, Dedication
 \vspace*{\fill}
 \begin{center}
 \textit{\href{https://latexonline.cc/compile?git=https://github.com/kisnikser/CV&target=cv.tex&command=xelatex&force=true}{Check my CV (long version)}}\\
-\textit{Last updated on October 6, 2024}
+\textit{Last updated on October 15, 2024}
 \end{center}
 \vspace{-0.5cm}
 \end{document}

@@ -1,6 +1,6 @@
 # Resume and Curriculum Vitae
 
-In this repository I provide source files for my **up-do-date** resume and curriculum vite (CV).
+In this repository I provide source files for my **up-to-date** resume and curriculum vitae (CV).
 
 The files are respectively:
 - `resume.tex`

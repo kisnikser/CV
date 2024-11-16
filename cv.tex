@@ -19,7 +19,7 @@
 \quote{\textit{\href{https://latexonline.cc/compile?git=https://github.com/kisnikser/CV&target=resume.tex&command=xelatex&force=true}{\textcolor{gray}{Check my Resume (one-page version)}}}\\\vspace{1em}\huge{Curriculum Vit\ae}}
 \address{Moscow, Russia}
 \email{kiselev.ns@phystech.edu}
-\newcommand*{\scholarsocialsymbol}{\includegraphics[height=.7\baselineskip]{google-scholar}}
+\newcommand*{\scholarsocialsymbol}{\includegraphics[height=.7\baselineskip]{assets/google-scholar}}
 \collectionadd[scholar]{socials}{\href{https://scholar.google.com/citations?hl=ru&user=8BOqs70AAAAJ}{ Google Scholar}}
 \social[linkedin]{kisnikser}
 \social[github]{kisnikser}
@@ -43,7 +43,7 @@
 {}
 
 % photo
-\photo[80pt][0.4pt]{photo.png}
+\photo[80pt][0.4pt]{assets/photo.png}
 
 \begin{document}
 
@@ -51,6 +51,13 @@
 
 \section{SUMMARY}
 Aspiring researcher (1+ year of research experience) in the field of machine learning and optimization. Focused on generative diffusion and multimodal models. Motivated for productive work and learning. Having a substantial theoretical foundation and mathematical background.
+
+\subsection{Professional Skills}
+\begin{enumerate}
+    \item \textbf{Generative AI:} diffusion models, text2image, image2image, controllable generation (ControlNet), adapters (IP-Adapter, Face-Adapter), style transfer, instruction-based image editing, image quality assessment.
+    \item \textbf{Computer Vision:} medical images reconstruction and forecasting (fMRI, EEG).
+    \item \textbf{Optimization:} sample size determination, loss landscape, decentralized optimization.
+\end{enumerate}
 
 \section{EDUCATION}
 
@@ -69,13 +76,13 @@ Aspiring researcher (1+ year of research experience) in the field of machine lea
 \cventry{Jun 2024 -- Present}{Research Intern}{\href{https://ai.sber.ru/en/about}{Sber AI}}{Moscow, Russia}{}{
     \begin{itemize}
         \item Research work on instructed image editing for the Kandinsky model
-        \item Implemented and trained a model for re-contextualization by human face (Kandinsky~3 + IP Adapter + PhotoMakerV2)
+        \item Implemented and trained a model for re-contextualization by human face (Kandinsky~3 + IP-Adapter + PhotoMakerV2)
         \item Collected a dataset on the movement of objects (LLaVa-Next + Grounding DINO + SAM + Alpha-CLIP-T + SDXL inpainting + SinSR)
         \item Created a module for calculating image editing metrics (LPIPS, DINO, CLIP-I, CLIP-T, CLIP-D, Alpha-CLIP)
     \end{itemize}
 }
 
-\cventry{Sep 2024 -- Present}{Mathematician-programmer}{\href{https://innopolis.university/en/centerforartificialintelligence/}{Center for Artificial Intelligence, Innopolis University}}{Innopolis, Russia}{}{
+\cventry{Sep 2024 -- Present}{Mathematician-programmer}{\href{https://innopolis.university/en/centerforartificialintelligence/}{Research Center for Artificial Intelligence, Innopolis University}}{Innopolis, Russia}{}{
 \begin{itemize}
     \item Research work in the field of optimization
 \end{itemize}
@@ -90,12 +97,14 @@ Aspiring researcher (1+ year of research experience) in the field of machine lea
 }
 
 \section{PUBLICATIONS}
-% \subsection{Published Papers}
-\subsection{Accepted Papers: 1 $\times$ Q1, 2 $\times$ Q2}
-\begin{enumerate}%[start=1,label={[\arabic*]}]
-    \item D. Dorin, N. Kiselev, A. Grabovoy\\
-    \href{https://github.com/DorinDaniil/Forecasting-fMRI-Images}{Forecasting fMRI Images From Video Sequences: Linear Model Analysis}\\
-    Accepted to the \href{https://link.springer.com/journal/13755}{Health Information Science and Systems} journal, \textbf{Q1}
+\subsection{Published Papers: 1 $\times$ Q1}
+\begin{enumerate}
+    \item D. Dorin, N. Kiselev, A. Grabovoy, V. Strijov\\
+    \href{https://doi.org/10.1007/s13755-024-00315-5}{Forecasting fMRI Images From Video Sequences: Linear Model Analysis}\\
+    \href{https://link.springer.com/journal/13755}{Health Information Science and Systems}, \textbf{Q1}
+\end{enumerate}
+\subsection{Accepted Papers: 2 $\times$ Q2}
+\begin{enumerate}
     \item N. Kiselev, A. Grabovoy\\
     \href{https://arxiv.org/abs/2409.11995}{Unraveling the Hessian: A Key to Smooth Convergence in Loss Function Landscapes}\\
     Accepted to the \href{https://link.springer.com/journal/11472}{Doklady Mathematics} journal, Q2
@@ -107,10 +116,10 @@ Aspiring researcher (1+ year of research experience) in the field of machine lea
 \begin{enumerate}%[start=1,label={[\arabic*]}]
     \item D.~Yarmoshik, A.~Rogozin, N.~Kiselev, D.~Dorin, A.~Gasnikov, D.~Kovalev\\
     \href{https://arxiv.org/abs/2407.02020}{Decentralized Optimization with Coupled Constraints}\\
-    Submitted to the \href{https://neurips.cc}{\textbf{ICLR 2025}} conference
+    Submitted to the \href{https://iclr.cc/}{\textbf{ICLR 2025}} conference with average rating 6.25, \textbf{A*}
     \item N. Kiselev, A. Grabovoy\\
     \href{https://github.com/kisnikser/Posterior-Distributions-Proximity}{Sample Size Determination: Posterior Distributions Proximity}\\
-    Submitted to the \href{https://link.springer.com/journal/10287}{Computational Management Science} journal
+    Submitted to the \href{https://link.springer.com/journal/10287}{Computational Management Science} journal, Q3
 \end{enumerate}
 \subsection{Conference Theses}
 \begin{enumerate}%[start=1,label={[\arabic*]}]
@@ -209,7 +218,7 @@ Aspiring researcher (1+ year of research experience) in the field of machine lea
 % Last updated on
 \vspace{\fill}
 \begin{center}
-\textit{Last updated on October 27, 2024}
+\textit{Last updated on November 16, 2024}
 \end{center}
 \vspace{-1.5cm}
 
